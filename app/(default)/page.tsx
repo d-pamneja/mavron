@@ -1,10 +1,13 @@
 export const metadata = {
-  title: "Home - Open PRO",
+  title: "Business Name",
   description: "Page description",
 };
 
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
+import { SmoothScrollHero } from "@/components/smooth-scroll";
+import { TextParallaxContentExample } from "@/components/features-scroll";
+import Carousel from "@/components/mini-carousel";
 import Workflows from "@/components/workflows";
 import Features from "@/components/features";
 import Testimonials from "@/components/testimonials";
@@ -15,9 +18,12 @@ export default function Home() {
     <>
       <PageIllustration />
       <Hero />
+      <SmoothScrollHero/>  {/* Intro Image Scroll Template */}
       <Workflows />
       <Features />
+      <TextParallaxContentExample/>  {/* Features Scroll Template */}
       <Testimonials />
+      <Carousel/>  {/* Mini Carousel Template */}
       <Cta />
     </>
   );
