@@ -31,7 +31,7 @@ export const TextParallaxContentExample = () => {
   );
 };
 
-const IMG_PADDING = 12;
+const IMG_PADDING = 15;
 
 const TextParallaxContent = ({
   imgUrl,
@@ -51,7 +51,7 @@ const TextParallaxContent = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[150vh]">
+      <div className="relative h-[150vh] mt-8">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
