@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 const Carousel = () => {
   return (
-    <div className="bg-neutral-800" style={{ backgroundColor: 'rgb(229, 231, 235)' }}>
+    <div>
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll down
@@ -30,7 +30,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {

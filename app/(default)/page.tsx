@@ -5,6 +5,7 @@ export const metadata = {
 
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
+import { MacbookScroll } from "@/components/macbook-scroll";
 import { SmoothScrollHero } from "@/components/smooth-scroll";
 import { TextParallaxContentExample } from "@/components/features-scroll";
 import Carousel from "@/components/mini-carousel";
@@ -17,13 +18,14 @@ export default function Home() {
   return (
     <>
       <PageIllustration />
-      <Hero />
-      <SmoothScrollHero/>  {/* Intro Image Scroll Template */}
-      <Workflows />
-      <Features />
+      <MacbookScroll src="/images/terminal-screenshot-home.png" /> {/* Macbook Scroll */}
+      <Hero /> {/* Terminal */}
+      {/*<SmoothScrollHero/>*/}  {/* Intro Image Scroll Template */}
+      <Workflows /> {/* Features 1 */}
+      {/*<Features />*/} {/* Features 2 */}
       <TextParallaxContentExample/>  {/* Features Scroll Template */}
-      <Testimonials />
-      <Carousel/>  {/* Mini Carousel Template */}
+      {/* <Testimonials /> */}
+      {/*<Carousel/>*/}  {/* Mini Carousel Template */}
       <Cta />
     </>
   );
