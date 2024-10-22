@@ -31,7 +31,7 @@ export const SmoothScrollHero = () => {
         {/* <TextGenerateEffectBox1 />
         <Project /> */}
         {/* Project Section 2 */}
-        <HeroParallax products={dummyProducts} />
+        {/* <HeroParallax products={dummyProducts} /> */}
       </ReactLenis>
     </div>
   );
@@ -192,7 +192,6 @@ function TextGenerateEffectBox1() {
             <TextGenerateEffect duration={1} filter={false} words={TranscendenceText} />
           </section>;
 }
-
 
 const Project = () => {
   return (
