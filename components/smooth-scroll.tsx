@@ -26,12 +26,12 @@ export const SmoothScrollHero = () => {
           lerp: 0.05,
         }}
       >
-        <Hero />
+        {/* <Hero /> */}
         {/* Project Section 1 */}
         {/* <TextGenerateEffectBox1 />
         <Project /> */}
         {/* Project Section 2 */}
-        {/* <HeroParallax products={dummyProducts} /> */}
+        <HeroParallax products={dummyProducts} />
       </ReactLenis>
     </div>
   );
@@ -45,8 +45,7 @@ const Hero = () => {
       style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
       className="relative w-full"
     >
-      <CenterImage />
-
+      {/* <CenterImage /> */}
       {/* <ParallaxImages /> */}
       {/* <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" /> */}
     </div>
@@ -294,7 +293,7 @@ const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] mb-10"
     >
       <TextContent />
       <motion.div
