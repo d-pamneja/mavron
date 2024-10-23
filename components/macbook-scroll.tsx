@@ -82,8 +82,6 @@ export const MacbookScroll = ({
     }, []);
   const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -135,7 +133,8 @@ export const MacbookScroll = ({
         {/* Parallax Mac Lid Section */}
         <div
             ref={ref}
-            className="relative min-h-screen flex flex-col items-center justify-start py-[clamp(2rem, 4vw, 80px)] md:py-50 flex-shrink-0 transform md:scale-100 scale-[0.35] sm:scale-50 overflow-hidden"
+            // className="relative min-h-screen flex flex-col items-center justify-start py-[clamp(2rem, 4vw, 80px)] md:py-50 flex-shrink-0 transform md:scale-100 scale-[0.35] sm:scale-50 overflow-hidden"
+            className="relative min-h-screen flex flex-col items-center justify-start py-[clamp(2rem, 4vw, 80px)] md:py-50 flex-shrink-0 overflow-hidden"
         >
             {/* Mac Lid */}
             <Lid
@@ -148,13 +147,14 @@ export const MacbookScroll = ({
 
             {/* Terminal Animation Container */}
             <div
-            className={`h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative transition-opacity duration-500 ${isLidVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative z-20 transition-opacity duration-500 ${isLidVisible ? 'opacity-100' : 'opacity-0'}`}
             >
             {/* Terminal UI (Base) */}
             <div className="h-10 w-full relative">
                 <div className="absolute inset-x-0 mx-auto w-[80%] h-4 bg-[#050505]" />
             </div>
-            <div className="flex relative">
+            <div className="flex relative z-10">
+                {/* Mac Inner Hardware Components */}
                 <div className="mx-auto w-[10%] overflow-hidden h-full">
                 <SpeakerGrid />
                 </div>
@@ -207,9 +207,6 @@ export const Lid = ({
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
-          <span className="text-white">
-            <AceternityLogo />
-          </span>
         </div>
       </div>
       <motion.div
@@ -226,7 +223,7 @@ export const Lid = ({
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
         <Image
           src={src as string}
-          alt="aceternity logo"
+          alt="terminal-screen"
           fill
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
         />
@@ -234,6 +231,7 @@ export const Lid = ({
     </div>
   );
 };
+
 
 export const Trackpad = () => {
   return (
@@ -704,23 +702,3 @@ export const OptionKey = ({ className }: { className: string }) => {
   );
 };
 
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-};

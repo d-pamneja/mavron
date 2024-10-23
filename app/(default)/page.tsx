@@ -4,14 +4,10 @@ export const metadata = {
 };
 
 import PageIllustration from "@/components/page-illustration";
-import Hero from "@/components/hero-home";
+import TerminalCode from "@/components/terminal-code";
 import { MacbookScroll } from "@/components/macbook-scroll";
-import { SmoothScrollHero } from "@/components/smooth-scroll";
-import { TextParallaxContentExample } from "@/components/features-scroll";
-import Carousel from "@/components/mini-carousel";
+import { SlideContentCombined } from "@/components/features-scroll";
 import Workflows from "@/components/workflows";
-import Features from "@/components/features";
-import Testimonials from "@/components/testimonials";
 import Cta from "@/components/cta";
 
 export default function Home() {
@@ -19,11 +15,11 @@ export default function Home() {
     <>
       <PageIllustration />
       <MacbookScroll src="/images/terminal-screenshot-home.png" /> {/* Macbook Scroll */}
-      <Hero /> {/* Terminal */}
+      <TerminalCode /> {/* Terminal */}
       {/*<SmoothScrollHero/>*/}  {/* Intro Image Scroll Template */}
       <Workflows /> {/* Features 1 */}
       {/*<Features />*/} {/* Features 2 */}
-      <TextParallaxContentExample/>  {/* Features Scroll Template */}
+      <SlideContentCombined/>  {/* Features Scroll Template */}
       {/* <Testimonials /> */}
       {/*<Carousel/>*/}  {/* Mini Carousel Template */}
       <Cta />
