@@ -7,6 +7,8 @@ const nextConfig = {images: {
         port: ''
       },
     ],
-  },};
+  },
+  trailingSlash: true
+};
 
 module.exports = nextConfig;
